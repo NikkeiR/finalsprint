@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FlightController;
+use App\Http\Controllers\PassengerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,11 +14,5 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-})->name('flights');
-
-Route::get('/passengers', function () {
-    return view('welcome');
-})->name('passengers');
+Route::get('/', [FlightController::class, 'index'])->name('flight.index');
+Route::get('/passengers', [PassengerController::class, 'index'])->name('passenger.index');
