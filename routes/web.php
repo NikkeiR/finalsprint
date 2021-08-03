@@ -16,4 +16,8 @@ use App\Http\Controllers\PassengerController;
 */
 Route::get('/', [FlightController::class, 'index'])->name('flight.index');
 Route::get('/passengers', [PassengerController::class, 'index'])->name('passenger.index');
+
+Route::get('/{id}', [FlightController::class, 'show'])->name('flight.show');
 Route::post('/', [FlightController::class, 'store'])->name('flight.store');
+Route::put('/{id}', [FlightController::class, 'update'])->name('flight.update');
+Route::delete('/{id}', [FlightController::class, 'destroy'])->name('flight.destroy');

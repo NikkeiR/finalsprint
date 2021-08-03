@@ -14,7 +14,7 @@
                 <tr>
                     <td>{{$p->id}}</td>
                     <td>{{$p->firstname}}</td>
-                    <td>//TODO Flight</td>
+                    <td>{{$p->flight->name}}</td>
                     <td>//TODO DELETE UPDATE</td>
                 </tr>
             @endforeach
