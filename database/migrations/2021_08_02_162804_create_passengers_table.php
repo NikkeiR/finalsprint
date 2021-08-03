@@ -16,7 +16,6 @@ class CreatePassengersTable extends Migration
         Schema::create('passengers', function (Blueprint $table) {
             $table->id();
             $table->string('firstname');
-            $table->integer('flight');
             $table->timestamps();
         });
     }

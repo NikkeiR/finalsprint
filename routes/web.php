@@ -16,3 +16,4 @@ use App\Http\Controllers\PassengerController;
 */
 Route::get('/', [FlightController::class, 'index'])->name('flight.index');
 Route::get('/passengers', [PassengerController::class, 'index'])->name('passenger.index');
+Route::post('/', [FlightController::class, 'store'])->name('flight.store');

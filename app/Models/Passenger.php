@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Passenger extends Model
 {
     use HasFactory;
+    public function flight() {
+        return $this->belongsTo('App\Models\Flight');
+    }
 }

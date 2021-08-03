@@ -11,8 +11,6 @@
     <header class="container">
         @include('partials.header')
     </header>
-    <section class="container">
-        @yield('content')
-    </section>
+    @yield('content')
 </body>
 </html>
