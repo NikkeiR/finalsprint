@@ -15,7 +15,7 @@ class SetupOneToManyFlightsToPassengers extends Migration
     {
         Schema::table('passengers', function (Blueprint $table) {
             $table->unsignedBigInteger('flight_id');
-            $table->foreign('flight_id')->references('id')->on('flights')->onDelete('cascade')->onUpdate('restrict');
+            $table->foreign('flight_id')->references('id')->on('flights')->onDelete('restrict')->onUpdate('restrict');
         });
     }
 

@@ -15,7 +15,7 @@ class FlightController extends Controller
     }
 
     public function store(Request $request) {
-        $this->validate($request, ['flight' => 'required|unique:flights,name',]);
+        $this->validate($request, ['flight' => 'required|unique:flights,name']);
         $fl = new \App\Models\Flight();
         $fl->name = $request['flight'];
         $fl->save();
@@ -23,17 +23,15 @@ class FlightController extends Controller
     }
     
     public function update($id, Request $request){
-        $this->validate($request, ['flight' => 'required|unique:flights,name',]);
+        $this->validate($request, ['flight' => 'required|unique:flights,name']);
         $fl = \App\Models\Flight::find($id);
         $fl->name = $request['flight'];
         $fl->save();
         return redirect('/');
     }
-    
+
     public function destroy($id){
         \App\Models\Flight::destroy($id);
         return redirect('/');
     }
-
-        
 }

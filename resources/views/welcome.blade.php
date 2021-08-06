@@ -21,8 +21,8 @@
                     </td>
                     <td> 
                         <form action="{{ route('flight.destroy', $fl->id) }}" method="POST" style="float: left">
-                        @method('DELETE') @csrf
-                        <input class="btn btn-danger" type="submit" value="DELETE">
+                            @method('DELETE') @csrf
+                            <input class="btn btn-danger" type="submit" value="DELETE">
                         </form>
                         <form action="{{ route('flight.show', $fl->id) }}" method="GET">
                             <input class="btn btn-primary" type="submit" value="UPDATE">
