@@ -19,6 +19,6 @@ This is a CRUD app built with Laravel.
 - Launch project server in terminal: php artisan serve
 
 ## Author
-Rolandas
+Rolandas Ur
 [GitHub](https://github.com/NikkeiR)
 [LinkedIn](https://www.linkedin.com/in/rolandas-urnikis-a9943420a/)
